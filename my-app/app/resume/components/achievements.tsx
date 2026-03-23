@@ -4,7 +4,13 @@ import { ExternalLink } from "lucide-react";
 
 export default function AchievementsSection() {
   return (
-    <section className="mb-8">
+    <section
+      className="mb-8"
+      style={{
+        contentVisibility: "auto",
+        containIntrinsicSize: "0 800px",
+      }}
+    >
       <h2 className="mb-4 text-2xl font-bold">
         Extracurricular Activities & Achievements
       </h2>

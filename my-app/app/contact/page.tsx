@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { GithubIcon } from "@/components/icons/github-icon";
@@ -9,17 +9,22 @@ import { Check, Copy } from "lucide-react";
 export default function ContactPage() {
   const [copied, setCopied] = useState(false);
   const emailAddress = "pupipat.sk@gmail.com";
+  const timeoutRef = useRef<ReturnType<typeof window.setTimeout> | null>(
+    null
+  );
 
   useEffect(() => {
-    if (!copied) return;
-    const timeout = setTimeout(() => setCopied(false), 2000);
-    return () => clearTimeout(timeout);
-  }, [copied]);
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
 
   async function handleCopyEmail() {
     try {
       await navigator.clipboard.writeText(emailAddress);
       setCopied(true);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = window.setTimeout(() => setCopied(false), 2000);
     } catch (error) {
       console.error("Failed to copy email address:", error);
     }
