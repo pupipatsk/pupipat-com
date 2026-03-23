@@ -81,6 +81,7 @@ export function PhotographyGallery() {
                       alt={photo.title || "Untitled"}
                       width={500}
                       height={500}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="rounded-md object-cover h-full w-full"
                       loading="lazy"
                       onClick={() => setSelectedPhoto(photo.src)}

@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import { CopyEmail } from "@/app/tutoring/components/copy-email";
+import type { Metadata } from "next";
 
 const TrustedCarousel = dynamic(
   () =>
@@ -14,6 +15,11 @@ const TrustedCarousel = dynamic(
     ),
   }
 );
+
+export const metadata: Metadata = {
+  title: "Tutoring",
+  description: "Book tutoring sessions with Pupipat Singkhorn.",
+};
 
 export default function TutoringPage() {
   return (

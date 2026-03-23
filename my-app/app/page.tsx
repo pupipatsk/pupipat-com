@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Pupipat Singkhorn's personal website.",
+};
 
 export default function Home() {
   return (

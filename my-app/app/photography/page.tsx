@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import { ExternalLink, Instagram } from "lucide-react";
+import type { Metadata } from "next";
 
 const PhotographyGallery = dynamic(
   () =>
@@ -14,6 +15,11 @@ const PhotographyGallery = dynamic(
     ),
   }
 );
+
+export const metadata: Metadata = {
+  title: "Photography",
+  description: "A selection of Pupipat Singkhorn's photography work.",
+};
 
 export default function PhotographyPage() {
   return (

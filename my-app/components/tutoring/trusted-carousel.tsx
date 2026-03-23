@@ -4,7 +4,6 @@ import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import AutoScroll from "embla-carousel-auto-scroll"
 import { Card, CardContent } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
 
 import Image from "next/image"
 
@@ -57,6 +56,7 @@ export function TrustedCarousel() {
                                                     src={school.image}
                                                     alt={school.name}
                                                     fill
+                                                    sizes="80px"
                                                     className="object-contain"
                                                 />
                                             </div>

@@ -5,6 +5,12 @@ import WorkExperienceSection from "./components/work-experience";
 import AchievementsSection from "./components/achievements";
 import SkillsSection from "./components/skills";
 import InterestsSection from "./components/interests";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Resume",
+  description: "Pupipat Singkhorn's resume and professional experience.",
+};
 
 export default function ResumePage() {
   return (

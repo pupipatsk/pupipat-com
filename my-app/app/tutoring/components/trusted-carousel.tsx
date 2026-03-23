@@ -69,6 +69,7 @@ export function TrustedCarousel() {
                           src={school.image}
                           alt={school.name}
                           fill
+                              sizes="80px"
                           className="object-contain"
                         />
                       </div>
