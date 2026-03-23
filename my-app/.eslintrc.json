@@ -1,0 +1,162 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript", "prettier"],
+  "plugins": ["prettier", "unused-imports", "import", "react-hooks"],
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    },
+    "next": {
+      "rootDir": "src/",
+      "appDir": "src/app"
+    }
+  },
+  "rules": {
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-non-null-assertion": "warn",
+    "@typescript-eslint/consistent-type-imports": [
+      "warn",
+      {
+        "prefer": "type-imports",
+        "disallowTypeAnnotations": false
+      }
+    ],
+    "react/no-unescaped-entities": "off",
+    "react/jsx-sort-props": [
+      "warn",
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true
+      }
+    ],
+    "react/jsx-curly-brace-presence": [
+      "warn",
+      {
+        "props": "never",
+        "children": "never"
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "import/no-duplicates": "warn",
+    "import/no-unresolved": ["error", { "ignore": ["^geist/"] }],
+    "import/named": "error",
+    "import/no-unused-modules": [
+      "error",
+      {
+        "unusedExports": true,
+        "missingExports": true
+      }
+    ],
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "no-unused-vars": "off",
+    "prettier/prettier": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["**/components/ui/**/*"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off",
+        "react/no-unescaped-entities": "off",
+        "prettier/prettier": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "import/order": "off",
+        "import/no-duplicates": "off",
+        "import/no-unresolved": "off",
+        "import/named": "off",
+        "react/jsx-sort-props": "off",
+        "react/jsx-curly-brace-presence": "off",
+        "unused-imports/no-unused-imports": "off",
+        "unused-imports/no-unused-vars": "off",
+        "import/no-unused-modules": "off"
+      }
+    },
+    {
+      "files": ["**/route.ts", "**/route.js"],
+      "rules": {
+        "import/no-unused-modules": "off"
+      }
+    },
+    {
+      "files": [
+        "**/layout.tsx",
+        "**/layout.ts",
+        "**/layout.jsx",
+        "**/layout.js"
+      ],
+      "rules": {
+        "import/no-unused-modules": "off"
+      }
+    },
+    {
+      "files": ["**/page.tsx", "**/page.ts", "**/page.jsx", "**/page.js"],
+      "rules": {
+        "import/no-unused-modules": "off"
+      }
+    },
+    {
+      "files": [
+        "**/loading.tsx",
+        "**/loading.ts",
+        "**/loading.jsx",
+        "**/loading.js"
+      ],
+      "rules": {
+        "import/no-unused-modules": "off"
+      }
+    },
+    {
+      "files": ["**/data-table.tsx", "**/*table*.tsx", "**/*table*.ts"],
+      "rules": {
+        "import/named": "off"
+      }
+    }
+  ]
+}
