@@ -7,7 +7,7 @@ export default function ResumeHeader() {
     <>
       <div className="mb-4 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
         <div>
-          <h1 className="text-3xl font-bold">Pupipat Singkhorn</h1>
+          <h1 className="text-3xl font-bold">Pupipat (Get) Singkhorn</h1>
           <div className="mt-2 flex flex-col space-y-1 text-muted-foreground sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0">
             <span>📧 pupipat.sk@gmail.com</span>
             <span>📍 Bangkok, Thailand</span>

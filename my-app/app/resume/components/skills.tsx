@@ -35,6 +35,11 @@ const languages = ["Thai (Native)", "English"];
 
 const certifications = [
   {
+    title: "Google Project Management Specialization",
+    issuer: "Google",
+    date: "February 2026",
+  },
+  {
     title: "LangChain Academy",
     issuer: "LangChain",
     date: "October 2025",

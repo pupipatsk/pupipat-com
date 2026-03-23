@@ -15,15 +15,13 @@ export default function Home() {
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                   Pupipat Singkhorn
                 </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                {/* <p className="max-w-[600px] text-muted-foreground md:text-xl">
                   Computer Engineering Student
-                </p>
+                </p> */}
               </div>
               <p className="max-w-[600px] text-muted-foreground">
-                I'm a Computer Engineering student at Chulalongkorn University
-                with a passion for data science, machine learning, and financial
-                technology. Currently focused on developing skills in risk
-                management and quantitative analysis.
+                Driven to create innovative solutions at the intersection of
+                investment, tech, and real-world applications.
               </p>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Button asChild>

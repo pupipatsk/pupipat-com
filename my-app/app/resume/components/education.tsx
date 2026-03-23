@@ -13,7 +13,11 @@ export default function EducationSection() {
             <span className="text-sm text-muted-foreground">2022 - 2026</span>
           </div>
           <p className="font-medium">
-            Bachelor of Engineering — Computer Engineering Major
+            Bachelor of Engineering, Computer Engineering
+            <span className="text-muted-foreground font-thin">
+              {" "}
+              - GPA: 3.59 / 4.00
+            </span>
           </p>
           <ul className="mt-2 space-y-1 text-sm text-muted-foreground list-disc list-inside">
             <li>
@@ -64,8 +68,13 @@ export default function EducationSection() {
             <h3 className="font-bold">Triam Udom Suksa School</h3>
             <span className="text-sm text-muted-foreground">2019 - 2022</span>
           </div>
-          <p className="font-medium">Science-Mathematics Major</p>
-          <p className="text-muted-foreground">GPA: 3.85</p>
+          <p className="font-medium">
+            Science-Mathematics Major
+            <span className="text-muted-foreground font-thin">
+              {" "}
+              - GPA: 3.85 / 4.00
+            </span>
+          </p>
           <ul className="mt-2 space-y-1 text-sm text-muted-foreground list-disc list-inside">
             <li>
               <span>
@@ -80,7 +89,7 @@ export default function EducationSection() {
                 <span className="font-serif text-base not-italic text-foreground">
                   Triam Udom Photo Club
                 </span>{" "}
-                - Staff and Member
+                - Staff member
               </span>
             </li>
           </ul>
