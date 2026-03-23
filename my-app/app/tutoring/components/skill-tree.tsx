@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import {
   Calculator,
   Sigma,
@@ -66,14 +66,16 @@ const skillTreeData: SkillNode = {
 const NodeCard = ({
   node,
   isRoot = false,
+  reduceMotion = false,
 }: {
   node: SkillNode;
   isRoot?: boolean;
+  reduceMotion?: boolean;
 }) => {
   return (
     <div className="flex flex-row items-center">
       <motion.div
-        whileHover={{ scale: 1.05 }}
+        whileHover={reduceMotion ? undefined : { scale: 1.05 }}
         className={cn(
           "relative flex flex-col items-center justify-center w-48 h-32 p-4 border rounded-xl bg-card z-10 transition-colors duration-300 cursor-pointer",
           isRoot
@@ -118,7 +120,7 @@ const NodeCard = ({
             <div key={child.id} className="relative flex items-center">
               {/* Horizontal line to child */}
               <div className="absolute -left-6 w-6 h-0.5 bg-border" />
-              <NodeCard node={child} />
+              <NodeCard node={child} reduceMotion={reduceMotion} />
             </div>
           ))}
         </div>
@@ -128,10 +130,12 @@ const NodeCard = ({
 };
 
 export function SkillTree() {
+  const reduceMotion = useReducedMotion();
+
   return (
     <div className="w-full overflow-x-auto py-12 px-4 scrollbar-hide">
       <div className="min-w-max flex items-center justify-center p-8">
-        <NodeCard node={skillTreeData} isRoot />
+        <NodeCard node={skillTreeData} isRoot reduceMotion={reduceMotion} />
       </div>
     </div>
   );

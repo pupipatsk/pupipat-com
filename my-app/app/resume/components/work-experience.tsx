@@ -69,6 +69,17 @@ export default function WorkExperienceSection() {
           </div>
           <div className="space-y-2">
             <div>
+              <ul className="ml-5 my-1 list-disc text-sm text-muted-foreground">
+                <li>
+                  Strengthened group-wide risk governance by executing Risk &
+                  Control Self-Assessments across 12 subsidiaries.
+                </li>
+                <li>
+                  Streamlined incident response by architecting a Data Loss
+                  Prevention (DLP) framework with automated tracking dashboards.
+                </li>
+              </ul>
+
               <h4 className="font-medium">Article on scbx.com</h4>
               <ul className="ml-5 my-1 list-disc text-sm text-muted-foreground">
                 <li>
@@ -131,32 +142,13 @@ export default function WorkExperienceSection() {
               <h4 className="font-medium">Used Car Price Forecasting</h4>
               <ul className="ml-5 list-disc text-sm text-muted-foreground">
                 <li>
-                  Developed ensemble machine learning models to forecast used
-                  car prices, aiding strategic decisions for automotive loan
-                  approvals.
-                </li>
-                <li>
-                  Collected and cleaned real-world business data, incorporating
-                  macro- and micro-economic factors.
-                </li>
-                <li>
-                  Leveraged time-series analysis and Bayesian optimization
-                  techniques for enhanced accuracy.
+                  Optimized automotive loan decision-making by developing
+                  predictive models for used-car valuations and NPL loss
+                  forecasting, improving pricing accuracy by 9%.
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-medium">Loss On Sale Forecasting for NPLs</h4>
-              <ul className="ml-5 list-disc text-sm text-muted-foreground">
-                <li>
-                  Built predictive models to estimate losses on Non-Performing
-                  Loans (NPLs), improving the bank's credit risk management.
-                </li>
-                <li>
-                  Applied techniques like coarse classing, binning, and memory
-                  optimization to improve performance.
-                </li>
-              </ul>
               <div className="mt-2 flex flex-wrap gap-2">
                 <Badge
                   variant="outline"
@@ -199,7 +191,12 @@ export default function WorkExperienceSection() {
                     variant="secondary"
                     className="rounded-full font-mono text-sm font-light text-muted-foreground"
                   >
-                    Tutoring <ExternalLink className="ml-1 h-3 w-3" />
+                    Tutoring{" "}
+                    <ExternalLink
+                      aria-hidden="true"
+                      focusable="false"
+                      className="ml-1 h-3 w-3"
+                    />
                   </Badge>
                 </Link>
               </div>
@@ -219,7 +216,12 @@ export default function WorkExperienceSection() {
                     variant="secondary"
                     className="rounded-full font-mono text-sm font-light text-muted-foreground hover:text-foreground"
                   >
-                    <Instagram className="mr-1 h-3 w-3" /> pupick.sk
+                    <Instagram
+                      aria-hidden="true"
+                      focusable="false"
+                      className="mr-1 h-3 w-3"
+                    />{" "}
+                    pupick.sk
                   </Badge>
                 </Link>
                 <Link
@@ -230,7 +232,12 @@ export default function WorkExperienceSection() {
                     variant="secondary"
                     className="rounded-full font-mono text-sm font-light text-muted-foreground"
                   >
-                    Photography <ExternalLink className="ml-1 h-3 w-3" />
+                    Photography{" "}
+                    <ExternalLink
+                      aria-hidden="true"
+                      focusable="false"
+                      className="ml-1 h-3 w-3"
+                    />
                   </Badge>
                 </Link>
               </div>

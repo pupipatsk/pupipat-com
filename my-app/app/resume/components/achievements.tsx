@@ -4,11 +4,175 @@ import { ExternalLink } from "lucide-react";
 
 export default function AchievementsSection() {
   return (
-    <section className="mb-8">
+    <section
+      className="mb-8"
+      style={{
+        contentVisibility: "auto",
+        containIntrinsicSize: "0 800px",
+      }}
+    >
       <h2 className="mb-4 text-2xl font-bold">
         Extracurricular Activities & Achievements
       </h2>
       <div className="space-y-6">
+        {/* seperate */}
+        <div className="space-y-2">
+          <div className="flex flex-row items-start gap-2 justify-between">
+            <h3 className="font-bold">
+              LLM Financial Advisor (Project Manager) - Senior Capstone
+            </h3>
+            <span className="text-sm text-muted-foreground whitespace-nowrap self-start">
+              August 2025 - May 2026
+            </span>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            Led a 5-member team to build a cloud-based AI system on Google Cloud
+            Platform (GCP) using Airflow and Docker, with Dynamic
+            Retrieval-Augmented Generation (RAG) to automate the synthesis of
+            real-time market data and financial reports for investment
+            decision-making.
+          </p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <Badge
+              variant="outline"
+              className="rounded-full font-mono text-sm font-light text-muted-foreground"
+            >
+              AI
+            </Badge>
+            <Badge
+              variant="outline"
+              className="rounded-full font-mono text-sm font-light text-muted-foreground"
+            >
+              Cloud
+            </Badge>
+            <Badge
+              variant="outline"
+              className="rounded-full font-mono text-sm font-light text-muted-foreground"
+            >
+              Project Management
+            </Badge>
+          </div>
+        </div>
+        {/* seperate */}
+        <div className="space-y-2">
+          <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+            <h3 className="font-bold">
+              Chulalongkorn Finance Club, Academic Team
+            </h3>
+            <span className="text-sm text-muted-foreground">
+              August 2025 - May 2026
+            </span>
+          </div>
+          <ul className="ml-5 list-disc text-sm text-muted-foreground">
+            <li>
+              Formulated the <em>CFA Mini Research Challenge 2026</em>{" "}
+              framework, establishing competition guidelines, equity research
+              standards, and judging rubrics aligned with CFA Institute
+              benchmarks.
+            </li>
+            <li>
+              Authored article{" "}
+              <em>FinInsight Feb. 2026: Rupture of the World Order</em>,
+              synthesizing 2026 World Economic Forum insights to demystify
+              global macroeconomic trends for a general audience.
+            </li>
+            <li>
+              Collaborated on the Casebook Development Team for the
+              <em> UOB x CBS Financial Solution Challenge 2025</em>.
+            </li>
+          </ul>
+        </div>
+        {/* seperate */}
+        <div className="space-y-2">
+          <div className="flex flex-row items-start gap-2 justify-between">
+            <h3 className="font-bold">
+              Extracting Time Series from Spatial Correlation Matrices via
+              Spectral Decomposition and Log-Determinant Fragility
+            </h3>
+            <span className="text-sm text-muted-foreground whitespace-nowrap self-start">
+              February 2026
+            </span>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            Developed a deterministic feature extraction engine that projects
+            high-dimensional N×N correlation sequences into continuous,
+            lower-dimensional signals to identify U.S. equity sector structural
+            fragility.
+          </p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <Badge
+              variant="outline"
+              className="rounded-full font-mono text-sm font-light text-muted-foreground"
+            >
+              Time Series Mining and Knowledge Discovery
+            </Badge>
+          </div>
+        </div>
+        {/* seperate */}
+        <div className="space-y-2">
+          <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+            <h3 className="font-bold">
+              Eurasia Asset Management Challenge 2026
+            </h3>
+            <span className="text-sm text-muted-foreground">February 2026</span>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            Constructed a high-conviction 30–50 stock ESG fund to capture alpha
+            from real-economy transitions and industrial decarbonization for the
+            Eurasia Asset Management Challenge, Nanyang Technological University
+            (NTU) IIC.
+          </p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <Badge
+              variant="outline"
+              className="rounded-full font-mono text-sm font-light text-muted-foreground"
+            >
+              Asset Management
+            </Badge>
+            <Badge
+              variant="outline"
+              className="rounded-full font-mono text-sm font-light text-muted-foreground"
+            >
+              Portfolio Construction
+            </Badge>
+            <Badge
+              variant="outline"
+              className="rounded-full font-mono text-sm font-light text-muted-foreground"
+            >
+              ESG Investing
+            </Badge>
+          </div>
+        </div>
+        {/* seperate */}
+        <div className="space-y-2">
+          <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+            <h3 className="font-bold">
+              CFA Institute Research Challenge in Thailand
+            </h3>
+            <span className="text-sm text-muted-foreground">
+              September 2025 - January 2026
+            </span>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            Worked with a team of 5 to prepare a comprehensive sell-side
+            initiating coverage report for PTT Oil and Retail Business Public
+            Company Limited (OR.BK).
+          </p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <Badge
+              variant="outline"
+              className="rounded-full font-mono text-sm font-light text-muted-foreground"
+            >
+              Equity Research
+            </Badge>
+            <Badge
+              variant="outline"
+              className="rounded-full font-mono text-sm font-light text-muted-foreground"
+            >
+              Financial Analysis
+            </Badge>
+          </div>
+        </div>
         {/* seperate */}
         <div className="space-y-2">
           <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
@@ -145,12 +309,6 @@ export default function AchievementsSection() {
               className="rounded-full font-mono text-sm font-light text-muted-foreground"
             >
               Decision-Making
-            </Badge>
-            <Badge
-              variant="outline"
-              className="rounded-full font-mono text-sm font-light text-muted-foreground"
-            >
-              Financial Analysis
             </Badge>
           </div>
         </div>
@@ -293,7 +451,11 @@ export default function AchievementsSection() {
                 rel="noopener noreferrer"
                 className="ml-2 inline-flex items-center text-sm text-muted-foreground hover:text-foreground"
               >
-                <ExternalLink className="ml-1 h-4 w-4" />
+                <ExternalLink
+                  aria-hidden="true"
+                  focusable="false"
+                  className="ml-1 h-4 w-4"
+                />
               </Link>
             </h3>
             <span className="text-sm text-muted-foreground">November 2024</span>
@@ -372,6 +534,7 @@ export default function AchievementsSection() {
             </Badge>
           </div>
         </div>
+        {/* seperate */}
         <div className="space-y-2">
           <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
             <h3 className="font-bold">
@@ -416,6 +579,7 @@ export default function AchievementsSection() {
             </Badge>
           </div>
         </div>
+        {/* seperate */}
         <div className="space-y-2">
           <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
             <h3 className="font-bold">Investment Experience</h3>

@@ -3,6 +3,8 @@ import { GithubIcon } from "@/components/icons/github-icon";
 import { LinkedinIcon } from "@/components/icons/linkedin-icon";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="py-12">
       <div className="flex justify-center px-4 pointer-events-none">
@@ -28,7 +30,7 @@ export default function Footer() {
             </Link>
           </div>
           <p className="text-sm text-muted-foreground text-center sm:text-left">
-            © 2025 Pupipat Singkhorn. All rights reserved.
+            © {year} Pupipat Singkhorn. All rights reserved.
           </p>
         </div>
       </div>

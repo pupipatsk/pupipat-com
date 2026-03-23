@@ -37,14 +37,39 @@ const SCHOOLS = [
 ];
 
 export function TrustedCarousel() {
-  const [emblaRef] = useEmblaCarousel({ loop: true, dragFree: true }, [
-    AutoScroll({
-      playOnInit: true,
-      stopOnInteraction: false,
-      stopOnMouseEnter: false,
-      speed: 1,
-    }),
-  ]);
+  const [prefersReducedMotion, setPrefersReducedMotion] = React.useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  });
+
+  React.useEffect(() => {
+    const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const onChange = () => setPrefersReducedMotion(mql.matches);
+
+    if (typeof mql.addEventListener === "function") {
+      mql.addEventListener("change", onChange);
+      return () => mql.removeEventListener("change", onChange);
+    }
+    mql.addListener(onChange);
+    return () => mql.removeListener(onChange);
+  }, []);
+
+  const plugins = React.useMemo(
+    () =>
+      prefersReducedMotion
+        ? []
+        : [
+            AutoScroll({
+              playOnInit: true,
+              stopOnInteraction: false,
+              stopOnMouseEnter: true,
+              speed: 1,
+            }),
+          ],
+    [prefersReducedMotion],
+  );
+
+  const [emblaRef] = useEmblaCarousel({ loop: true, dragFree: true }, plugins);
 
   return (
     <div className="w-full py-0 bg-background">
@@ -69,6 +94,7 @@ export function TrustedCarousel() {
                           src={school.image}
                           alt={school.name}
                           fill
+                          sizes="80px"
                           className="object-contain"
                         />
                       </div>

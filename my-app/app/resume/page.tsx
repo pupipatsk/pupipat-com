@@ -5,10 +5,16 @@ import WorkExperienceSection from "./components/work-experience";
 import AchievementsSection from "./components/achievements";
 import SkillsSection from "./components/skills";
 import InterestsSection from "./components/interests";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Resume",
+  description: "Pupipat Singkhorn's resume and professional experience.",
+};
 
 export default function ResumePage() {
   return (
-    <div className="container max-w-4xl py-12">
+    <div className="container max-w-4xl py-12 tabular-nums">
       <ResumeHeader />
 
       <Separator className="my-8" />

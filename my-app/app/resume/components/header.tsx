@@ -1,16 +1,26 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+import { Download, Mail, MapPin } from "lucide-react";
 
 export default function ResumeHeader() {
   return (
     <>
       <div className="mb-4 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
         <div>
-          <h1 className="text-3xl font-bold">Pupipat Singkhorn</h1>
+          <h1 className="text-3xl font-bold">Pupipat (Get) Singkhorn</h1>
           <div className="mt-2 flex flex-col space-y-1 text-muted-foreground sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0">
-            <span>📧 pupipat.sk@gmail.com</span>
-            <span>📍 Bangkok, Thailand</span>
+            <span className="inline-flex items-center gap-2">
+              <Mail aria-hidden="true" focusable="false" className="h-4 w-4" />
+              pupipat.sk@gmail.com
+            </span>
+            <span className="inline-flex items-center gap-2">
+              <MapPin
+                aria-hidden="true"
+                focusable="false"
+                className="h-4 w-4"
+              />
+              Bangkok, Thailand
+            </span>
           </div>
         </div>
         <Button variant="outline" className="shrink-0" asChild>

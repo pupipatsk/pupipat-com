@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Pupipat Singkhorn's personal website.",
+};
 
 export default function Home() {
   return (
@@ -15,25 +21,33 @@ export default function Home() {
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                   Pupipat Singkhorn
                 </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                {/* <p className="max-w-[600px] text-muted-foreground md:text-xl">
                   Computer Engineering Student
-                </p>
+                </p> */}
               </div>
               <p className="max-w-[600px] text-muted-foreground">
-                I'm a Computer Engineering student at Chulalongkorn University
-                with a passion for data science, machine learning, and financial
-                technology. Currently focused on developing skills in risk
-                management and quantitative analysis.
+                Driven to create innovative solutions at the intersection of
+                investment, tech, and real-world applications.
               </p>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Button asChild>
                   <Link href="/resume">
-                    View Resume <ArrowRight className="ml-2 h-4 w-4" />
+                    View Resume{" "}
+                    <ArrowRight
+                      aria-hidden="true"
+                      focusable="false"
+                      className="ml-2 h-4 w-4"
+                    />
                   </Link>
                 </Button>
                 <Button variant="secondary" asChild>
                   <Link href="/photography">
-                    View Photography <ArrowRight className="ml-2 h-4 w-4" />
+                    View Photography{" "}
+                    <ArrowRight
+                      aria-hidden="true"
+                      focusable="false"
+                      className="ml-2 h-4 w-4"
+                    />
                   </Link>
                 </Button>
               </div>
