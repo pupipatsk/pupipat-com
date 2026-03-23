@@ -10,7 +10,7 @@ const TrustedCarousel = dynamic(
   {
     loading: () => (
       <div className="container mx-auto px-4 py-12 text-center text-muted-foreground">
-        Loading trusted institutions...
+        Loading trusted institutions…
       </div>
     ),
   }

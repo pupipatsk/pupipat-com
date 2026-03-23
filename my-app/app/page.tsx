@@ -32,12 +32,22 @@ export default function Home() {
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Button asChild>
                   <Link href="/resume">
-                    View Resume <ArrowRight className="ml-2 h-4 w-4" />
+                    View Resume{" "}
+                    <ArrowRight
+                      aria-hidden="true"
+                      focusable="false"
+                      className="ml-2 h-4 w-4"
+                    />
                   </Link>
                 </Button>
                 <Button variant="secondary" asChild>
                   <Link href="/photography">
-                    View Photography <ArrowRight className="ml-2 h-4 w-4" />
+                    View Photography{" "}
+                    <ArrowRight
+                      aria-hidden="true"
+                      focusable="false"
+                      className="ml-2 h-4 w-4"
+                    />
                   </Link>
                 </Button>
               </div>

@@ -191,7 +191,12 @@ export default function WorkExperienceSection() {
                     variant="secondary"
                     className="rounded-full font-mono text-sm font-light text-muted-foreground"
                   >
-                    Tutoring <ExternalLink className="ml-1 h-3 w-3" />
+                    Tutoring{" "}
+                    <ExternalLink
+                      aria-hidden="true"
+                      focusable="false"
+                      className="ml-1 h-3 w-3"
+                    />
                   </Badge>
                 </Link>
               </div>
@@ -211,7 +216,12 @@ export default function WorkExperienceSection() {
                     variant="secondary"
                     className="rounded-full font-mono text-sm font-light text-muted-foreground hover:text-foreground"
                   >
-                    <Instagram className="mr-1 h-3 w-3" /> pupick.sk
+                    <Instagram
+                      aria-hidden="true"
+                      focusable="false"
+                      className="mr-1 h-3 w-3"
+                    />{" "}
+                    pupick.sk
                   </Badge>
                 </Link>
                 <Link
@@ -222,7 +232,12 @@ export default function WorkExperienceSection() {
                     variant="secondary"
                     className="rounded-full font-mono text-sm font-light text-muted-foreground"
                   >
-                    Photography <ExternalLink className="ml-1 h-3 w-3" />
+                    Photography{" "}
+                    <ExternalLink
+                      aria-hidden="true"
+                      focusable="false"
+                      className="ml-1 h-3 w-3"
+                    />
                   </Badge>
                 </Link>
               </div>

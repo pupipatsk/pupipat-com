@@ -90,9 +90,17 @@ export default function RootLayout({
       <body
         className={`${serifFont.variable} ${sansSerifFont.variable} ${monoFont.variable} font-sans`}
       >
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:rounded-md focus:bg-background focus:px-3 focus:py-2 focus:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        >
+          Skip to main content
+        </a>
         <div className="flex min-h-screen flex-col">
           <Navbar />
-          <main className="flex-1 pt-20">{children}</main>
+          <main id="main" className="flex-1 pt-20">
+            {children}
+          </main>
           <Footer />
         </div>
       </body>

@@ -25,12 +25,12 @@ export default function ContactPage() {
         <div className="grid w-full max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3 pt-8">
           <CopyEmailButton
             email="pupipat.sk@gmail.com"
-            className="flex h-40 w-full flex-col items-center justify-center gap-2 rounded-xl border-0 bg-neutral-100 hover:bg-neutral-200"
+            className="flex h-40 w-full flex-col items-center justify-center gap-2 rounded-xl border-0 bg-secondary hover:bg-secondary/80"
           />
           <Button
             variant="outline"
             asChild
-            className="flex h-40 w-full flex-col items-center justify-center gap-2 rounded-xl border-0 bg-neutral-100 hover:bg-neutral-200"
+            className="flex h-40 w-full flex-col items-center justify-center gap-2 rounded-xl border-0 bg-secondary hover:bg-secondary/80"
           >
             <Link
               href="https://www.linkedin.com/in/pupipatsk"
@@ -44,7 +44,7 @@ export default function ContactPage() {
           <Button
             variant="outline"
             asChild
-            className="flex h-40 w-full flex-col items-center justify-center gap-2 rounded-xl border-0 bg-neutral-100 hover:bg-neutral-200"
+            className="flex h-40 w-full flex-col items-center justify-center gap-2 rounded-xl border-0 bg-secondary hover:bg-secondary/80"
           >
             <Link
               href="https://github.com/pupipatsk"

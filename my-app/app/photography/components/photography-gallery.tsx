@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
+import { useRouter, useSearchParams } from "next/navigation";
 import dynamic from "next/dynamic";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -41,9 +42,30 @@ export function PhotographyGallery() {
     {}
   );
 
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const categoryFromUrl = useMemo(() => {
+    const raw = searchParams.get("category");
+    if (categories.some((c) => c.id === raw)) return raw ?? "all";
+    return "all";
+  }, [searchParams]);
+
   return (
     <>
-      <Tabs defaultValue="all" className="mb-8">
+      <Tabs
+        value={categoryFromUrl}
+        onValueChange={(value) => {
+          const params = new URLSearchParams(searchParams.toString());
+          if (value === "all") {
+            params.delete("category");
+          } else {
+            params.set("category", value);
+          }
+          router.replace(`?${params.toString()}`, { scroll: false });
+        }}
+        className="mb-8"
+      >
         <div className="mb-6 overflow-x-auto">
           <TabsList className="inline-flex whitespace-nowrap justify-start">
             {categories.map((category) => (
@@ -63,9 +85,12 @@ export function PhotographyGallery() {
                     category.id === "all" || photo.category === category.id
                 )
                 .map((photo) => (
-                  <div
+                  <button
                     key={photo.id}
-                    className="photo-item relative aspect-square overflow-hidden"
+                    type="button"
+                    className="photo-item relative aspect-square overflow-hidden bg-transparent border-0 p-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    aria-label={`Open ${photo.category} photo ${photo.id}`}
+                    onClick={() => setSelectedPhoto(photo.src)}
                   >
                     <Skeleton
                       className="absolute inset-0 h-full w-full"
@@ -78,13 +103,16 @@ export function PhotographyGallery() {
 
                     <Image
                       src={photo.src || "/placeholder.svg?height=500&width=500"}
-                      alt={photo.title || "Untitled"}
+                      alt={
+                        photo.title?.trim()
+                          ? photo.title
+                          : `${category.name} photo ${photo.id}`
+                      }
                       width={500}
                       height={500}
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="rounded-md object-cover h-full w-full"
                       loading="lazy"
-                      onClick={() => setSelectedPhoto(photo.src)}
                       onLoad={() =>
                         setLoadedPhotos((prev) => ({
                           ...prev,
@@ -92,7 +120,7 @@ export function PhotographyGallery() {
                         }))
                       }
                     />
-                  </div>
+                  </button>
                 ))}
             </div>
           </TabsContent>

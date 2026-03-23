@@ -27,6 +27,11 @@ export function CopyEmail({ email = "pupipatsk@gmail.com", className }: CopyEmai
             <div className="relative flex items-center w-full max-w-xs sm:max-w-xs">
                 <Input
                     readOnly
+                    type="email"
+                    name="email"
+                    autoComplete="email"
+                    aria-label="Email address"
+                    spellCheck={false}
                     value={email}
                     className="pr-12 h-11 bg-secondary/30 border-border/50 font-mono text-sm text-center text-muted-foreground focus-visible:ring-0 focus-visible:ring-offset-0"
                 />
@@ -43,6 +48,11 @@ export function CopyEmail({ email = "pupipatsk@gmail.com", className }: CopyEmai
                     )}
                     <span className="sr-only">Copy email</span>
                 </Button>
+                {copied && (
+                  <span className="sr-only" role="status" aria-live="polite" aria-atomic="true">
+                    Email copied to clipboard!
+                  </span>
+                )}
             </div>
         </div>
     )

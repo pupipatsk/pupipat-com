@@ -451,7 +451,11 @@ export default function AchievementsSection() {
                 rel="noopener noreferrer"
                 className="ml-2 inline-flex items-center text-sm text-muted-foreground hover:text-foreground"
               >
-                <ExternalLink className="ml-1 h-4 w-4" />
+                <ExternalLink
+                  aria-hidden="true"
+                  focusable="false"
+                  className="ml-1 h-4 w-4"
+                />
               </Link>
             </h3>
             <span className="text-sm text-muted-foreground">November 2024</span>

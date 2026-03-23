@@ -10,7 +10,7 @@ const PhotographyGallery = dynamic(
   {
     loading: () => (
       <div className="py-12 text-center text-muted-foreground">
-        Loading photography...
+        Loading photography…
       </div>
     ),
   }
@@ -42,9 +42,17 @@ export default function PhotographyPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Instagram className="h-4 w-4" />
+              <Instagram
+                aria-hidden="true"
+                focusable="false"
+                className="h-4 w-4"
+              />
               <span className="font-mono text-sm">@pupick.sk</span>
-              <ExternalLink className="h-3 w-3 opacity-50 group-hover:opacity-100 transition-opacity" />
+              <ExternalLink
+                aria-hidden="true"
+                focusable="false"
+                className="h-3 w-3 opacity-50 group-hover:opacity-100 transition-opacity"
+              />
             </a>
           </div>
         </div>

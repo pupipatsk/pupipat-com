@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function ResumePage() {
   return (
-    <div className="container max-w-4xl py-12">
+    <div className="container max-w-4xl py-12 tabular-nums">
       <ResumeHeader />
 
       <Separator className="my-8" />

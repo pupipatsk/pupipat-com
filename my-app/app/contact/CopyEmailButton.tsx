@@ -45,7 +45,14 @@ export function CopyEmailButton({
       {copied ? (
         <>
           <Check className="h-8 w-8 text-green-500" />
-          <span className="text-lg font-medium">Copied!</span>
+          <span
+            className="text-lg font-medium"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            Copied!
+          </span>
         </>
       ) : (
         <>

@@ -108,7 +108,12 @@ export default function EducationSection() {
                 variant="secondary"
                 className="rounded-full font-mono text-sm font-light text-muted-foreground"
               >
-                Photography <ExternalLink className="ml-1 h-3 w-3" />
+                Photography{" "}
+                <ExternalLink
+                  aria-hidden="true"
+                  focusable="false"
+                  className="ml-1 h-3 w-3"
+                />
               </Badge>
             </Link>
           </div>
